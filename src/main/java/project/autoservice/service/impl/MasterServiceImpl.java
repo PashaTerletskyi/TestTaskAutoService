@@ -1,16 +1,17 @@
 package project.autoservice.service.impl;
 
+import java.math.BigDecimal;
+import java.util.List;
 import org.springframework.stereotype.Service;
 import project.autoservice.dao.MasterRepository;
 import project.autoservice.model.Master;
 import project.autoservice.model.Order;
 import project.autoservice.service.MasterService;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 @Service
 public class MasterServiceImpl implements MasterService {
+    private static int ONE_HUNDRED = 100;
+    private static int FORTY = 40;
     private MasterRepository masterRepository;
 
     public MasterServiceImpl(MasterRepository masterRepository) {
@@ -51,6 +52,7 @@ public class MasterServiceImpl implements MasterService {
                 .stream()
                 .map(Order::getFinalPrice)
                 .reduce(BigDecimal.valueOf(0), BigDecimal::add);
-        return masterCost.multiply(BigDecimal.valueOf(40)).divide(BigDecimal.valueOf(100));
+        return masterCost.multiply(BigDecimal.valueOf(FORTY))
+                .divide(BigDecimal.valueOf(ONE_HUNDRED));
     }
 }

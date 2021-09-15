@@ -1,13 +1,19 @@
 package project.autoservice.controller;
 
-import org.springframework.web.bind.annotation.*;
+import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import project.autoservice.dto.request.OwnerRequestDto;
 import project.autoservice.dto.response.OwnerResponseDto;
 import project.autoservice.model.Order;
 import project.autoservice.model.Owner;
 import project.autoservice.service.OwnerService;
 import project.autoservice.service.mapper.OwnerMapper;
-import java.util.List;
 
 @RestController
 @RequestMapping("/owners")
@@ -36,7 +42,7 @@ public class OwnerController {
         return ownerMapper.mapToDto(owner);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{id}/orders")
     public List<Order> getOrdersById(@PathVariable Long id) {
         return ownerService.get(id).getOrders();
     }

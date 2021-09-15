@@ -2,14 +2,14 @@ package project.autoservice.service.mapper;
 
 import org.springframework.stereotype.Component;
 import project.autoservice.dto.request.CarRequestDto;
-import project.autoservice.model.Car;
 import project.autoservice.dto.response.CarResponseDto;
+import project.autoservice.model.Car;
 import project.autoservice.model.Owner;
 import project.autoservice.service.OwnerService;
 
 @Component
 public class CarMapper implements ResponseDtoMapper<CarResponseDto, Car>,
-        RequestDtoMapper<CarRequestDto, Car>{
+        RequestDtoMapper<CarRequestDto, Car> {
     private final OwnerService ownerService;
 
     public CarMapper(OwnerService ownerService) {

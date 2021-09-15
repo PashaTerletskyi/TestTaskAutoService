@@ -1,6 +1,11 @@
 package project.autoservice.controller;
 
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import project.autoservice.dto.request.CarRequestDto;
 import project.autoservice.dto.response.CarResponseDto;
 import project.autoservice.model.Car;

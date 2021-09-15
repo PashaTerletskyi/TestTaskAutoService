@@ -1,8 +1,7 @@
 package project.autoservice.service;
 
-import project.autoservice.model.Car;
-
 import java.util.List;
+import project.autoservice.model.Car;
 
 public interface CarService {
     Car create(Car car);

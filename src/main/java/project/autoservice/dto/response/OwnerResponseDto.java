@@ -1,9 +1,9 @@
 package project.autoservice.dto.response;
 
+import java.util.List;
 import lombok.Data;
 import project.autoservice.model.Car;
 import project.autoservice.model.Order;
-import java.util.List;
 
 @Data
 public class OwnerResponseDto {

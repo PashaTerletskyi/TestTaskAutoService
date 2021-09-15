@@ -1,9 +1,9 @@
 package project.autoservice.service;
 
-import project.autoservice.model.Master;
-import project.autoservice.model.Order;
 import java.math.BigDecimal;
 import java.util.List;
+import project.autoservice.model.Master;
+import project.autoservice.model.Order;
 
 public interface MasterService {
     Master create(Master master);

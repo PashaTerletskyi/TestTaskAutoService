@@ -2,8 +2,8 @@ package project.autoservice.service.mapper;
 
 import org.springframework.stereotype.Component;
 import project.autoservice.dto.request.OwnerRequestDto;
-import project.autoservice.model.Owner;
 import project.autoservice.dto.response.OwnerResponseDto;
+import project.autoservice.model.Owner;
 import project.autoservice.service.CarService;
 import project.autoservice.service.OrderService;
 

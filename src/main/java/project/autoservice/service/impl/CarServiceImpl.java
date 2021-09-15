@@ -1,10 +1,10 @@
 package project.autoservice.service.impl;
 
+import java.util.List;
 import org.springframework.stereotype.Service;
 import project.autoservice.dao.CarRepository;
 import project.autoservice.model.Car;
 import project.autoservice.service.CarService;
-import java.util.List;
 
 @Service
 public class CarServiceImpl implements CarService {
@@ -31,6 +31,6 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public Car getCarById(Long id) {
-        return  carRepository.findById(id).get();
+        return carRepository.findById(id).get();
     }
 }

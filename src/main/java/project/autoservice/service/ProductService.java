@@ -1,8 +1,7 @@
 package project.autoservice.service;
 
-import project.autoservice.model.Product;
-
 import java.util.List;
+import project.autoservice.model.Product;
 
 public interface ProductService {
     Product create(Product product);

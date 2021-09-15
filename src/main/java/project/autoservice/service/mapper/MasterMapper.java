@@ -2,8 +2,8 @@ package project.autoservice.service.mapper;
 
 import org.springframework.stereotype.Component;
 import project.autoservice.dto.request.MasterRequestDto;
-import project.autoservice.model.Master;
 import project.autoservice.dto.response.MasterResponseDto;
+import project.autoservice.model.Master;
 import project.autoservice.service.OrderService;
 
 @Component
@@ -16,7 +16,7 @@ public class MasterMapper implements ResponseDtoMapper<MasterResponseDto, Master
     }
 
     @Override
-    public MasterResponseDto mapToDto(Master master){
+    public MasterResponseDto mapToDto(Master master) {
         MasterResponseDto masterResponseDto = new MasterResponseDto();
         masterResponseDto.setId(master.getId());
         masterResponseDto.setFullName(master.getFullName());

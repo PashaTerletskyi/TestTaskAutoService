@@ -1,8 +1,7 @@
 package project.autoservice.service;
 
-import project.autoservice.model.Service;
-
 import java.util.List;
+import project.autoservice.model.Service;
 
 public interface ServiceService {
     Service create(Service service);

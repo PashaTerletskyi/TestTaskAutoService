@@ -1,6 +1,15 @@
 package project.autoservice.controller;
 
-import org.springframework.web.bind.annotation.*;
+import java.math.BigDecimal;
+import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import project.autoservice.dto.request.OrderRequestDto;
 import project.autoservice.dto.response.OrderResponseDto;
 import project.autoservice.model.Order;
@@ -9,9 +18,6 @@ import project.autoservice.service.OrderService;
 import project.autoservice.service.ProductService;
 import project.autoservice.service.mapper.OrderMapper;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
@@ -19,7 +25,9 @@ public class OrderController {
     private final OrderMapper orderMapper;
     private final ProductService productService;
 
-    public OrderController(OrderService orderService, OrderMapper orderMapper, ProductService productService) {
+    public OrderController(OrderService orderService,
+                           OrderMapper orderMapper,
+                           ProductService productService) {
         this.orderService = orderService;
         this.orderMapper = orderMapper;
         this.productService = productService;
@@ -32,7 +40,7 @@ public class OrderController {
         return orderMapper.mapToDto(order);
     }
 
-    @PostMapping
+    @PostMapping("/products")
     public OrderResponseDto addProduct(@RequestParam Long orderId,
                                        @RequestParam Long productId) {
         Order order = orderService.getById(orderId);
@@ -53,7 +61,7 @@ public class OrderController {
         return orderMapper.mapToDto(order);
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/{id}/status")
     public OrderResponseDto updateStatus(@PathVariable Long id,
                                    @RequestParam Order.Status status) {
         Order order = orderService.getById(id);

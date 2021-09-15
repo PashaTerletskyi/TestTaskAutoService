@@ -2,8 +2,8 @@ package project.autoservice.service.mapper;
 
 import org.springframework.stereotype.Component;
 import project.autoservice.dto.request.ServiceRequestDto;
-import project.autoservice.model.Service;
 import project.autoservice.dto.response.ServiceResponseDto;
+import project.autoservice.model.Service;
 import project.autoservice.service.MasterService;
 
 @Component

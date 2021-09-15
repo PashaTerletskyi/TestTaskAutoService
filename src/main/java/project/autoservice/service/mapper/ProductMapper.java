@@ -2,8 +2,8 @@ package project.autoservice.service.mapper;
 
 import org.springframework.stereotype.Component;
 import project.autoservice.dto.request.ProductRequestDto;
-import project.autoservice.model.Product;
 import project.autoservice.dto.response.ProductResponseDto;
+import project.autoservice.model.Product;
 
 @Component
 public class ProductMapper implements ResponseDtoMapper<ProductResponseDto, Product>,

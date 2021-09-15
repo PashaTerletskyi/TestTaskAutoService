@@ -1,11 +1,10 @@
 package project.autoservice.service.impl;
 
+import java.util.List;
 import org.springframework.stereotype.Component;
 import project.autoservice.dao.ServiceRepository;
 import project.autoservice.model.Service;
 import project.autoservice.service.ServiceService;
-
-import java.util.List;
 
 @Component
 public class ServiceServiceImpl implements ServiceService {
@@ -16,17 +15,17 @@ public class ServiceServiceImpl implements ServiceService {
     }
 
     @Override
-    public project.autoservice.model.Service create(project.autoservice.model.Service service) {
+    public Service create(Service service) {
         return serviceRepository.save(service);
     }
 
     @Override
-    public project.autoservice.model.Service update(project.autoservice.model.Service service) {
+    public Service update(Service service) {
         return serviceRepository.save(service);
     }
 
     @Override
-    public project.autoservice.model.Service findById(Long id) {
+    public Service findById(Long id) {
         return serviceRepository.getById(id);
     }
 

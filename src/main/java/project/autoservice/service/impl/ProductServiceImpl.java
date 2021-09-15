@@ -1,11 +1,10 @@
 package project.autoservice.service.impl;
 
+import java.util.List;
 import org.springframework.stereotype.Service;
 import project.autoservice.dao.ProductRepository;
 import project.autoservice.model.Product;
 import project.autoservice.service.ProductService;
-
-import java.util.List;
 
 @Service
 public class ProductServiceImpl implements ProductService {
